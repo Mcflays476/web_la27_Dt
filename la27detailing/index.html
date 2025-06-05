@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La 27 Detailing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-block">
+    <img src="logola27.png" alt="La 27 Detailing">
+  </div>
+  <button class="btn" onclick="toggleContact()">RESERVA TU TURNO!</button>
+</header>
+
+<section class="hero">
+  ESTÉTICA VEHICULAR
+</section>
+
+<section class="services">
+  <button onclick="openModal('lavado')">LAVADO</button>
+  <button onclick="openModal('pulidos')">PULIDOS</button>
+  <button onclick="openModal('interior')">INTERIOR</button>
+</section>
+
+<!-- Modales -->
+<div id="modal-lavado" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('lavado')">&times;</span>
+    <h2>Lavado de Vehículo</h2>
+    <p><strong>Lavado común:</strong> limpieza exterior rápida,interior, llantas y vidrios.</p>
+    <p><strong>Lavado premium:</strong> lavado a mano, encerado,interior, llantas a fondo y secado con microfibra.</p>
+  </div>
+</div>
+
+<div id="modal-pulidos" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('pulidos')">&times;</span>
+    <h2>Servicio de Pulidos</h2>
+    <ul>
+      <li>Abrillantado</li>
+      <li>Corrección de pintura en 2 pasos</li>
+      <li>Tratamientos</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-interior" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('interior')">&times;</span>
+    <h2>Limpieza Interior</h2>
+    <p>Aspirado profundo, limpieza de tapizados, paneles, consola y tratamiento de plásticos.</p>
+  </div>
+</div>
+
+<!-- Calendario de reservas -->
+<div class="booking-container">
+  <h3>Reservá tu turno</h3>
+  <input type="text" id="fecha-turno" placeholder="Selecciona una fecha">
+  <input type="text" id="nombre-cliente" placeholder="Tu nombre">
+  <input type="number" id="telefono-cliente" placeholder="Tu teléfono">
+  <button onclick="reservarTurno()">Reservar Turno</button>
+  <p id="estado-reserva"></p>
+</div>
+
+<!-- Contacto -->
+<section class="contact-section" id="contact">
+  <h2>INFORMACIÓN DE CONTACTO</h2>
+  <p>Calle 27 E/ 10 y 12 (Centro)<br>Pcia. Roque Saenz Peña, Chaco, Argentina.</p>
+  <a href="https://wa.me/543644364703"><button class="contact-button">CONTACTANOS</button></a>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="script.js"></script>
+</body>
+</html>
